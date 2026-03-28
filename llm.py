@@ -7,7 +7,11 @@ client = Groq(
 
 def generate_response(prompt):
     chat_completion = client.chat.completions.create(
-        messages=[
+        messages=[ 
+            {
+             "role":"system",
+             "content": "You are a helpful AI assistant and your creator is Gitanshi Gupta."            
+             },
             {
                 "role": "user",
                 "content": prompt,
