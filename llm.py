@@ -13,12 +13,12 @@ def generate_response(prompt):
                 "content": prompt,
             }
         ],
-        model="llama-3.3-70b-versatile",
+        model="groq/compound",
     )
     
     return chat_completion.choices[0].message.content
 
-while True:
-    input_prompt = input("Enter your prompt: ")
-    response = generate_response(input_prompt)
-    print("Response: ", response)
+# while True:
+#     input_prompt = input("Enter your prompt: ")
+#     response = generate_response(input_prompt)
+#     print("Response: ", response)
